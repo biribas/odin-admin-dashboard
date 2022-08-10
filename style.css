@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --footer-height: 2rem;
+  --logo-size: 3rem;
+}
+
+body {
+  height: 100vh;
+}
+
+#content {
+  height: 100%;
+  display: grid;
+  grid-template: 1fr repeat(2, 2fr) var(--footer-height) / auto 2fr 1fr;
+}
+
+#sidebar {
+  grid-area: 1 / 1 / -1 / span 1;
+  display: grid;
+  grid-template: 1fr 4fr 1fr / 1fr;
+  justify-items: center;
+  font-size: 2.5rem;
+  padding: 10px;
+}
+
+.main-icons, .secondary-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.secondary-icons {
+  align-self: end;
+}
+
+.logo {
+  display: grid;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  gap: 5px;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+}
+
+.logo > * {
+  background-color: black;
+}
+
+.logo .square1 {
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+
+.logo .square2 {
+  grid-area: span 1 / 1 / -1 / span 1;
+}
+
+.logo .square3 {
+  grid-area: 1 / span 1 / span 1 / -1;
+}
+
+.logo .square4 {
+  grid-area: span 2 / span 1 / -1 / -1;
+}
