@@ -68,3 +68,9 @@ body {
 .logo .square4 {
   grid-area: span 2 / span 1 / -1 / -1;
 }
+
+#greetings {
+  grid-area: 1 / 2 / span 1 / -1;
+  display: flex;
+
+}
