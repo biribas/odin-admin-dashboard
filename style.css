@@ -8,7 +8,6 @@
 
 :root {
   font-size: 16px;
-  --footer-height: 2rem;
   --logo-size: 3rem;
   --profile-image-size: 6rem;
   --header-buttons-height: 4rem;
@@ -22,7 +21,7 @@ body {
 #content {
   height: 100%;
   display: grid;
-  grid-template: 1fr repeat(2, 2fr) var(--footer-height) / auto 2fr 1fr;
+  grid-template: 1fr repeat(2, 2fr) auto / auto 2fr 1fr;
 }
 
 #sidebar {
@@ -149,4 +148,46 @@ body {
   background-color: rgb(70, 70, 70);
   border: 0;
   border-radius: 2rem;
+}
+
+#cards {
+  grid-area: 2 / 2 / span 2 / span 1;
+}
+
+#announcements {
+  grid-area: 2 / span 1 / span 1 / -1;
+}
+
+#trending {
+  grid-area: 3 / span 1 / span 1 / -1;
+}
+
+footer {
+  grid-area: span 1 / 2 / -1 / -1;
+  justify-self: center;
+  align-self: center;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+a {
+  position: relative;
+  color: var(--emoji-yellow);
+  text-decoration: none;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+  transition: width .1s;
+  pointer-events: none;
+}
+
+a:hover::after {
+  width: 0%;
 }
