@@ -10,6 +10,9 @@
   font-size: 16px;
   --footer-height: 2rem;
   --logo-size: 3rem;
+  --profile-image-size: 6rem;
+  --header-buttons-height: 4rem;
+  --header-buttons-width: 8rem;
 }
 
 body {
@@ -24,11 +27,13 @@ body {
 
 #sidebar {
   grid-area: 1 / 1 / -1 / span 1;
+  background-color: snow;
   display: grid;
   grid-template: 1fr 4fr 1fr / 1fr;
   justify-items: center;
   font-size: 2.5rem;
   padding: 10px;
+  z-index: 2;
 }
 
 .main-icons, .secondary-icons {
@@ -69,8 +74,79 @@ body {
   grid-area: span 2 / span 1 / -1 / -1;
 }
 
-#greetings {
+#header {
   grid-area: 1 / 2 / span 1 / -1;
-  display: flex;
+  display: grid;
+  grid-template: 1fr 2fr / 1fr 1fr;
+  padding: 0 4rem;
+  background-color: snow;
+  box-shadow: 0px 2px 10px grey;
+}
 
+.search-bar {
+  grid-area: 1 / 1 / span 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.search-bar label {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  flex: 1; 
+  text-indent: 0.5rem;
+  background-color: lightgrey;
+  border: 0;
+  border-radius: 1rem;
+}
+
+.search-bar input:focus {
+  outline: 2px solid grey;
+}
+
+.greetings {
+  grid-area: span 1 / 1 / -1 / span 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.greetings img {
+  width: var(--profile-image-size);
+  height: var(--profile-image-size);
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.greetings .greeting {
+  font-size: 1.2rem;
+}
+
+.greetings .name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.buttons {
+  grid-area: span 1 / span 1 / -1 / -1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttons button {
+  cursor: pointer;
+  height: var(--header-buttons-height);
+  width: var(--header-buttons-width);
+  font-size: 1.5rem;
+  color: snow;
+  font-weight: bold;
+  background-color: rgb(70, 70, 70);
+  border: 0;
+  border-radius: 2rem;
 }
