@@ -18,6 +18,7 @@
   min-height: 100vh;
   display: grid;
   grid-template: 1fr repeat(2, 2fr) auto / auto 2fr 1fr;
+  position: relative;
 }
 
 #sidebar {
@@ -29,6 +30,9 @@
   font-size: 2.5rem;
   padding: 10px;
   z-index: 2;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 .main-icons, .secondary-icons {
@@ -147,15 +151,19 @@
 }
 
 #projects {
+  padding: 2rem;
   grid-area: 2 / 2 / span 2 / span 1;
 }
 
 #projects #cards {
   display: grid;
+  grid-template: repeat(2, 300px) / repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .card {
-
+  border: 1px solid black;
+  height: 300px;
 }
 
 #announcements {
