@@ -21,24 +21,43 @@
 }
 
 #sidebar {
-  max-height: 100vh;
-  overflow: auto;
   grid-area: 1 / 1 / -1 / span 1;
+  height: 100vh;
+  font-size: 2rem;
   background-color: snow;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.sidebar-inner-scroll {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar-inner-scroll ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  font-size: 2rem;
-  padding: 1rem;
-  z-index: 2;
-  position: sticky;
-  top: 0;
+  gap: .5rem;
+  margin-bottom: 3.5rem;
+}
+
+.toggle-sidebar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 3rem;
+  width: 100%;
+  background-color: snow;
+  bottom: 0;
+  z-index: 1;
 }
 
 .logo {
   flex-shrink: 0;
-  margin-bottom: 1rem;
+  margin: .5rem;
   display: grid;
   width: var(--logo-size);
   height: var(--logo-size);
@@ -64,13 +83,6 @@
 
 .logo .square4 {
   grid-area: span 2 / span 1 / -1 / -1;
-}
-
-#sidebar:last-child {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 3;
 }
 
 #header {
