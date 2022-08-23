@@ -151,7 +151,7 @@ main {
 .projects-cards {
   flex: 1;
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template: repeat(2, 1fr) / repeat(auto-fit, minmax(22rem, 1fr));
   gap: 1rem;
 }
 
@@ -201,7 +201,7 @@ main {
   position: absolute;
   left: 0; top: 0; right: 0; bottom: 0;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gap);
@@ -218,6 +218,10 @@ main {
 
 .announcement {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: justify;
 }
 
 .announcement:not(:last-child)::after {
@@ -225,8 +229,8 @@ main {
   position: absolute;
   bottom: calc(-1 * (2px + var(--gap) / 2));
   width: 100%;
-  border-bottom: 1px solid grey;
-  border-top: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
 }
 
 #trending {
