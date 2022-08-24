@@ -6,37 +6,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="./script.js" defer></script>
   <title>Admin Dashboard</title>
 </head>
 <body>
-  <div id="content">
-    <aside id="sidebar">
-      <div class="sidebar-inner-scroll">
-        <ul>
-          <li>
+  <aside class="colapsed" id="sidebar">
+    <div class="sidebar-inner-scroll">
+      <ul class="items-list">
+        <li>
+          <a href="#">
             <div class="logo">
               <i class="square1"></i>
               <i class="square2"></i>
               <i class="square3"></i>
               <i class="square4"></i>
             </div>
-          </li>
-          <li><i class="ph-house-fill"></i></li>
-          <li><i class="ph-user-fill"></i></li>
-          <li><i class="ph-chat-text-fill"></i></li>
-          <li><i class="ph-clock-counter-clockwise-fill"></i></li>
-          <li><i class="ph-check-square-offset-fill"></i></li>
-          <li><i class="ph-users-three-fill"></i></li>
-          <li><i class="ph-gear-fill"></i></li>
-          <li><i class="ph-question-fill"></i></li>
-          <li><i class="ph-shield-check-fill"></i></li>
-        </ul>
-      </div>
-      <div class="toggle-sidebar-button">
-        <i class="ph-caret-double-right"></i>
-      </div>
-    </aside>
+            <span class="item-name">Admin Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-house-fill"></i>
+            <span class="item-name">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-user-fill"></i>
+            <span class="item-name">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-chat-text-fill"></i>
+            <span class="item-name">Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-clock-counter-clockwise-fill"></i>
+            <span class="item-name">History</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-check-square-offset-fill"></i>
+            <span class="item-name">Tasks</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-users-three-fill"></i>
+            <span class="item-name">Communities</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-gear-fill"></i>
+            <span class="item-name">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-question-fill"></i>
+            <span class="item-name">Support</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="item-icon ph-shield-check-fill"></i>
+            <span class="item-name">Privacy</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="toggle-sidebar-button">
+      <i class="ph-caret-double-right"></i>
+      <span class="item-name">Colapse sidebar</span>
+    </div>
+  </aside>
 
+  <section id="content">
     <header>
       <div class="greetings">
         <img src="https://gitlab.com/uploads/-/system/user/avatar/11793219/avatar.png" alt="birbas' Gitlab profile photo">
@@ -278,6 +328,6 @@
     <footer>
       A project made by <a href="https://github.com/biribas">biribas</a> for <a href="https://www.theodinproject.com/">The Odin Project</a>
     </footer>
-  </div>
+  </section>
 </body>
 </html>
