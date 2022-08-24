@@ -63,8 +63,9 @@ body {
 
 .items-list a {
   display: flex;
-  gap: 1rem;
+  height: var(--icons-size);
   align-items: center;
+  gap: 1rem;
   text-decoration: none;
   color: black;
   margin: 0 1rem;
@@ -72,6 +73,7 @@ body {
 }
 
 .items-list li:first-child a {
+  height: var(--logo-size);
   margin-top: 1rem;
   margin-bottom: 0.75rem;
   padding: 0;
@@ -84,6 +86,7 @@ body {
 .item-name {
   font-size: 1.5rem;
   display: none;
+  white-space: nowrap;
 }
 
 .show-item-name {
@@ -105,7 +108,16 @@ body {
   bottom: 0;
 }
 
+.toggle-sidebar-button i {
+  transition: transform var(--sidebar-time) ease;
+}
+
+.rotate i {
+  transform: rotate(-180deg);
+}
+
 .logo {
+  flex-shrink: 0;
   display: grid;
   width: var(--logo-size);
   height: var(--logo-size);
