@@ -25,11 +25,11 @@ body {
   padding-left: var(--colapsed-sidebar-width);
   display: grid;
   grid-template: auto repeat(2, 1fr) auto / 3fr 1fr;
-  transition: transform var(--sidebar-time) ease;
+  transition: padding var(--sidebar-time) ease;
 }
 
 #content.transitioned {
-  transform: translateX(calc(var(--sidebar-width) - var(--colapsed-sidebar-width)));
+  padding-left: var(--sidebar-width);
 }
 
 #sidebar {
