@@ -191,6 +191,18 @@ header {
   gap: var(--size);
 }
 
+.mobile-buttons > * {
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.mobile-buttons > *:hover {
+  background-color: lightgrey;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
