@@ -21,19 +21,15 @@
   --sidebar-time: 0.3s;
 }
 
-body {
-  min-height: 100vh;
-  position: relative;
-}
-
 #content {
+  min-height: 100vh;
   padding-left: var(--sidebar-width);
   display: grid;
   grid-template: auto repeat(2, 1fr) auto / 3fr 1fr;
   transition: padding var(--sidebar-time) ease;
 }
 
-#content.collapsed {
+.collapsed #content {
   padding-left: var(--collapsed-sidebar-width);
 }
 
@@ -48,8 +44,12 @@ body {
   transition: width var(--sidebar-time) ease;
 }
 
-#sidebar.collapsed {
+.collapsed #sidebar {
   width: var(--collapsed-sidebar-width);
+}
+
+#sidebar.hidden {
+  display: none;
 }
 
 .sidebar-inner-scroll {
@@ -97,7 +97,7 @@ body {
   transition: width var(--sidebar-time) ease;
 }
 
-.toggle-sidebar-button.collapsed {
+.collapsed .toggle-sidebar-button {
   width: var(--collapsed-sidebar-width);
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .toggle-icon.rotated {
-  transform: rotate(-180deg);
+  transform: rotate3d(0, 1, 0, -180deg);
 }
 
 .hidden .item-name {
@@ -440,11 +440,12 @@ footer a:hover::after {
 }
 
 @media only screen and (max-width: 750px) {
-  #sidebar {
+  #announcements, #trending {
     display: none;
+    position: absolute;
   }
 
-  #content.collapsed, #content {
+  .collapsed #content, #content {
     padding-left: 0;
   }
 
@@ -469,12 +470,6 @@ footer a:hover::after {
   #projects {
     grid-area: 1 / 1 / -1 / -1;
   }
-
-  #announcements, #trending {
-    display: none;
-    position: absolute;
-  }
-
 }
 
 @media only screen and (max-width: 500px) {
