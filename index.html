@@ -10,12 +10,12 @@
   <title>Admin Dashboard</title>
 </head>
 <body>
-  <aside class="colapsed" id="sidebar">
+  <aside class="collapsed hidden" id="sidebar">
     <div class="sidebar-inner-scroll">
       <ul class="items-list">
-        <li>
-          <a href="#">
-            <div class="logo">
+        <li id="logo">
+          <a class="link-button" href="#">
+            <div class="logo-image">
               <i class="square1"></i>
               <i class="square2"></i>
               <i class="square3"></i>
@@ -25,68 +25,68 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-house-fill"></i>
             <span class="item-name">Home</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-user-fill"></i>
             <span class="item-name">Profile</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-chat-text-fill"></i>
             <span class="item-name">Messages</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-clock-counter-clockwise-fill"></i>
             <span class="item-name">History</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-check-square-offset-fill"></i>
             <span class="item-name">Tasks</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-users-three-fill"></i>
             <span class="item-name">Communities</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-gear-fill"></i>
-            <span class="item-name">Settings</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="item-icon ph-question-fill"></i>
             <span class="item-name">Support</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a class="link-button" href="#">
             <i class="item-icon ph-shield-check-fill"></i>
+            <span class="item-name">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a class="link-button" href="#">
+            <i class="item-icon ph-question-fill"></i>
             <span class="item-name">Privacy</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="toggle-sidebar-button">
-      <i class="ph-caret-double-right"></i>
+    <div class="toggle-sidebar-button collapsed">
+      <i class="item-icon toggle-icon ph-caret-double-right"></i>
       <span class="item-name">Colapse sidebar</span>
     </div>
   </aside>
 
-  <section id="content">
+  <section class="collapsed" id="content">
     <header>
       <div class="greetings">
         <img src="https://gitlab.com/uploads/-/system/user/avatar/11793219/avatar.png" alt="birbas' Gitlab profile photo">
