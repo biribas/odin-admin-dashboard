@@ -411,6 +411,21 @@ footer a:hover::after {
   width: 0%;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 1205px) {
   :root {
     --sidebar-width: 17rem;
@@ -436,6 +451,7 @@ footer a:hover::after {
   }
 }
 
+/* Mobile version */
 @media only screen and (max-width: 750px) {
   .collapsed #sidebar {
     width: 0;
@@ -452,8 +468,8 @@ footer a:hover::after {
     top: 0;
     bottom: 0;
     right: 0;
-    transition: width var(--sidebar-time) ease;
     z-index: 2;
+    transition: width var(--sidebar-time) ease;
     background-color: snow;
     border-left: 1px solid black;
   }
