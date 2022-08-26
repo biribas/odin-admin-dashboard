@@ -462,21 +462,21 @@ footer a:hover::after {
   }
 
   #announcements, #trending {
-    box-sizing: content-box;
-    width: 0;
+    --width: min(calc(1.2 * var(--sidebar-width)), 80%);
+    padding: 1rem;
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
+    width: var(--width);
+    right: calc(-1 * var(--width));
     z-index: 2;
-    transition: width var(--sidebar-time) ease;
+    transition: right var(--sidebar-time) ease;
     background-color: snow;
     border-left: 1px solid black;
   }
 
   .show#announcements, .show#trending {
-    padding: 1rem;
-    width: var(--sidebar-width);
+    right: 0;
   }
 
   .collapsed #content, #content {
