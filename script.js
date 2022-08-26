@@ -49,5 +49,5 @@ hideSidebarQuery.onchange = e => {
   document.body.classList.add("collapsed");
   sidebar.classList.add("hidden-names");
   toggleIcon.classList.remove("rotated");
-
+  overlay.classList.add("hidden");
 }
