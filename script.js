@@ -1,7 +1,8 @@
 const toggleButton = document.querySelector(".toggle-sidebar-button");
 const toggleIcon = document.querySelector(".toggle-icon");
 const sidebar = document.querySelector("#sidebar")
-const content = document.querySelector("#content");
+const announcements = document.querySelector("#announcements");
+const trending = document.querySelector("#trending");
 
 const hamburguer = document.querySelector(".hamburguer");
 const announcementsButton = document.querySelector(".announcements-button")
@@ -11,29 +12,30 @@ const hideSidebarQuery = window.matchMedia("(max-width: 750px)");
 
 toggleButton.addEventListener('click', (e) => {
   document.body.classList.toggle("collapsed");
-  document.body.classList.toggle("hidden");
+  sidebar.classList.toggle("hidden-names");
   toggleIcon.classList.toggle("rotated");
 });
 
 hamburguer.addEventListener('click', e => {
-  
+  document.body.classList.remove("collapsed");
+  sidebar.classList.remove("hidden-names");
 });
 
 announcementsButton.addEventListener('click', e => {
-
+  announcements.classList.add("show");
 });
 
 trendingButton.addEventListener('click', e => {
-
+  trending.classList.add("show");
 });
 
 hideSidebarQuery.onchange = e => {
-  if (e.matches) {
-    document.body.classList.add("collapsed", "hidden");
-    toggleIcon.classList.remove("rotated");
-    sidebar.classList.add("hidden");
+  if (!e.matches) {
+    announcements.classList.remove("show");
+    trending.classList.remove("show");
   }
-  else {
-    sidebar.classList.remove("hidden");
-  }
+  document.body.classList.add("collapsed");
+  sidebar.classList.add("hidden-names");
+  toggleIcon.classList.remove("rotated");
+
 }
