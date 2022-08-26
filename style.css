@@ -516,4 +516,12 @@ footer a:hover::after {
   #projects {
     grid-area: 1 / 1 / -1 / -1;
   }
+
+  footer a {
+    text-decoration: underline;
+  }
+
+  footer a::after {
+    width: 0;
+  }
 }
