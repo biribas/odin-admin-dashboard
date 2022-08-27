@@ -511,8 +511,8 @@ footer a:hover::after {
 
   .greetings {
     justify-content: center;
-  }
-
+  } 
+  
   #projects {
     grid-area: 1 / 1 / -1 / -1;
   }
@@ -523,5 +523,15 @@ footer a:hover::after {
 
   footer a::after {
     width: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    --profile-image-size: 4rem;
+  }
+
+  .greetings h2 {
+    font-size: 1.2rem;
   }
 }
