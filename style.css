@@ -134,7 +134,7 @@
   display: grid;
   width: var(--logo-size);
   height: var(--logo-size);
-  gap: 5px;
+  gap: .25rem;
   grid-template: 1fr 1fr 1fr / 1fr 1fr;
 }
 
