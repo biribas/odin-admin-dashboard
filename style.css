@@ -466,6 +466,7 @@ body.hidden-overlay .overlay {
   }
 
   #announcements, #trending {
+    gap: .5rem;
     --width: min(calc(1.2 * var(--sidebar-width)), 80%);
     padding: 1rem;
     position: fixed;
@@ -481,6 +482,13 @@ body.hidden-overlay .overlay {
 
   .show#announcements, .show#trending {
     right: 0;
+  }
+
+  .announcements-card, .trending-card {
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid lightgrey;
+    box-shadow: none;
   }
 
   .collapsed #content, #content {
