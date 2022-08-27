@@ -18,26 +18,24 @@ toggleButton.addEventListener('click', () => {
 });
 
 hamburguer.addEventListener('click', () => {
-  document.body.classList.remove("collapsed");
+  document.body.classList.remove("collapsed", "hidden-overlay");
   sidebar.classList.remove("hidden-names");
-  overlay.classList.remove("hidden");
 });
 
 announcementsButton.addEventListener('click', () => {
+  document.body.classList.remove("hidden-overlay");
   announcements.classList.add("show");
-  overlay.classList.remove("hidden");
 });
 
 trendingButton.addEventListener('click', () => {
+  document.body.classList.remove("hidden-overlay");
   trending.classList.add("show");
-  overlay.classList.remove("hidden");
 });
 
 overlay.addEventListener('click', () => {
-  overlay.classList.add('hidden');
+  document.body.classList.add("collapsed", "hidden-overlay");
   announcements.classList.remove("show");
   trending.classList.remove("show");
-  document.body.classList.add("collapsed");
   sidebar.classList.add("hidden-names");
 });
 
@@ -46,8 +44,7 @@ hideSidebarQuery.onchange = e => {
     announcements.classList.remove("show");
     trending.classList.remove("show");
   }
-  document.body.classList.add("collapsed");
+  document.body.classList.add("collapsed", "hidden-overlay");
   sidebar.classList.add("hidden-names");
   toggleIcon.classList.remove("rotated");
-  overlay.classList.add("hidden");
 }

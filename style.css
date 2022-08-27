@@ -422,7 +422,7 @@ footer a:hover::after {
   z-index: 1;
 }
 
-.overlay.hidden {
+body.hidden-overlay .overlay {
   display: none;
 }
 
@@ -453,6 +453,10 @@ footer a:hover::after {
 
 /* Mobile version */
 @media only screen and (max-width: 750px) {
+  body:not(.hidden-overlay) {
+    overflow: hidden;
+  }
+
   .collapsed #sidebar {
     width: 0;
   }
@@ -495,6 +499,8 @@ footer a:hover::after {
 
   .header-buttons {
     flex-direction: column;
+    position: sticky;
+    top: 0;
   }
 
   .mobile-buttons {
