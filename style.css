@@ -499,8 +499,6 @@ body.hidden-overlay .overlay {
 
   .header-buttons {
     flex-direction: column;
-    position: sticky;
-    top: 0;
   }
 
   .mobile-buttons {
