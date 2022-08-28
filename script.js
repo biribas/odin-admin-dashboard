@@ -38,6 +38,7 @@ trendingButton.addEventListener('click', () => {
 lightMode.addEventListener('click', () => {
   lightMode.classList.add("hidden");
   darkMode.classList.remove("hidden");
+  document.body.classList.remove("dark-theme");
   document.body.classList.add("light-theme");
 });
 
@@ -45,6 +46,7 @@ darkMode.addEventListener('click', () => {
   lightMode.classList.remove("hidden");
   darkMode.classList.add("hidden");
   document.body.classList.remove("light-theme");
+  document.body.classList.add("dark-theme");
 });
 
 overlay.addEventListener('click', () => {
