@@ -6,8 +6,11 @@ const trending = document.querySelector("#trending");
 const overlay = document.querySelector(".overlay");
 
 const hamburguer = document.querySelector(".hamburguer");
-const announcementsButton = document.querySelector(".announcements-button")
-const trendingButton = document.querySelector(".trending-button")
+const announcementsButton = document.querySelector(".announcements-button");
+const trendingButton = document.querySelector(".trending-button");
+
+const lightMode = document.querySelector(".light-mode");
+const darkMode = document.querySelector(".dark-mode");
 
 const hideSidebarQuery = window.matchMedia("(max-width: 750px)");
 
@@ -30,6 +33,18 @@ announcementsButton.addEventListener('click', () => {
 trendingButton.addEventListener('click', () => {
   document.body.classList.remove("hidden-overlay");
   trending.classList.add("show");
+});
+
+lightMode.addEventListener('click', () => {
+  lightMode.classList.add("hidden");
+  darkMode.classList.remove("hidden");
+  document.body.classList.add("light-theme");
+});
+
+darkMode.addEventListener('click', () => {
+  lightMode.classList.remove("hidden");
+  darkMode.classList.add("hidden");
+  document.body.classList.remove("light-theme");
 });
 
 overlay.addEventListener('click', () => {
