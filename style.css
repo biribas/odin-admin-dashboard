@@ -321,10 +321,20 @@ main {
 .card-buttons {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem 1.5rem;
+  padding: .75rem 1.5rem;
   font-size: 1.5rem;
   gap: 1rem;
   color: var(--card-buttons-color);
+}
+
+.card-buttons i {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: .25rem;
+}
+
+.card-buttons i:hover {
+  background-color: var(--sencond-bg-color);
 }
 
 #announcements {
