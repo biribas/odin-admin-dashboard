@@ -33,6 +33,18 @@
   --card-buttons-color: #91ddd1;
 }
 
+.light-theme {
+  --bg-color: #d6dae2;
+  --sencond-bg-color: #eff1f5;
+  --text-color: #24273a;
+  --card-text-color: grey;
+  --shadow-color: grey;
+  --border-image-color: #60637a;
+  --card-before-color: #f98847;
+  --hover-color: #f4b189;
+  --card-buttons-color: #fa6d1c;
+}
+
 #content {
   background-color: var(--sencond-bg-color);
   color: var(--text-color);
@@ -230,6 +242,7 @@ header {
   flex: 1; 
   text-indent: 0.5rem;
   background-color: var(--card-text-color);
+  color: var(--bg-color);
   border: 0;
   border-radius: 16px;
 }
@@ -521,7 +534,7 @@ body.hidden-overlay .overlay {
   .announcements-card, .trending-card {
     border: 0;
     border-radius: 0;
-    border-top: 2px solid lightgrey;
+    border-top: 2px solid var(--card-text-color);
     box-shadow: none;
   }
 
