@@ -506,10 +506,17 @@ body.hidden-overlay .overlay {
 
   #sidebar {
     border: 0;
+    left: 0;
+    transition: width 0.001s ease, left var(--sidebar-time) ease;
   }
 
   .collapsed #sidebar {
-    width: 0;
+    left: calc(-1 * var(--sidebar-width));
+    width: var(--sidebar-width);
+  }
+
+  #sidebar.hidden-names .item-name {
+    display: inline;
   }
 
   .toggle-sidebar-button {
